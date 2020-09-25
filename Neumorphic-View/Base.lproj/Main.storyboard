@@ -23,11 +23,35 @@
                                     <constraint firstAttribute="height" constant="200" id="dvr-eq-SGW"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jx-7K-YTI" customClass="NeumorphicView" customModule="Neumorphic_View" customModuleProvider="target">
+                                <rect key="frame" x="125" y="434" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.56078431370000004" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="C6F-ce-tTT"/>
+                                    <constraint firstAttribute="height" constant="70" id="Mvm-3i-pNB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="36"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="QeQ-te-fbs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C3I-C1-35n"/>
                             <constraint firstItem="QeQ-te-fbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QWj-4f-cgz"/>
+                            <constraint firstItem="1Jx-7K-YTI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFU-p7-7sV"/>
+                            <constraint firstItem="1Jx-7K-YTI" firstAttribute="top" secondItem="QeQ-te-fbs" secondAttribute="bottom" constant="50" id="x12-Mw-mIE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="138.75" y="138.38028169014083"/>
         </scene>
     </scenes>
 </document>

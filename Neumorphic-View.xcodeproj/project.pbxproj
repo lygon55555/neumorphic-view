@@ -13,6 +13,7 @@
 		C7BDD33A251AE3440058D0B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BDD338251AE3440058D0B4 /* Main.storyboard */; };
 		C7BDD33C251AE3440058D0B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BDD33B251AE3440058D0B4 /* Assets.xcassets */; };
 		C7BDD33F251AE3440058D0B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BDD33D251AE3440058D0B4 /* LaunchScreen.storyboard */; };
+		C7D420C0251C8709006C19E5 /* NeumorphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D420BF251C8709006C19E5 /* NeumorphicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C7BDD33B251AE3440058D0B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7BDD33E251AE3440058D0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7BDD340251AE3440058D0B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D420BF251C8709006C19E5 /* NeumorphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C7BDD332251AE3440058D0B4 /* AppDelegate.swift */,
 				C7BDD334251AE3440058D0B4 /* SceneDelegate.swift */,
 				C7BDD336251AE3440058D0B4 /* ViewController.swift */,
+				C7D420BF251C8709006C19E5 /* NeumorphicView.swift */,
 				C7BDD338251AE3440058D0B4 /* Main.storyboard */,
 				C7BDD33B251AE3440058D0B4 /* Assets.xcassets */,
 				C7BDD33D251AE3440058D0B4 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D420C0251C8709006C19E5 /* NeumorphicView.swift in Sources */,
 				C7BDD337251AE3440058D0B4 /* ViewController.swift in Sources */,
 				C7BDD333251AE3440058D0B4 /* AppDelegate.swift in Sources */,
 				C7BDD335251AE3440058D0B4 /* SceneDelegate.swift in Sources */,
