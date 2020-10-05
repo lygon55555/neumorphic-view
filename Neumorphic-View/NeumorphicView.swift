@@ -70,12 +70,6 @@ class NeumorphicView: UIView {
         }
     }
     
-    
-    // Switch 구문으로
-    // shape 선택한 거에 따라 case 적용하기
-    // direction 선택한 거에 따라 case 적용하기 (그림자방향)
-    
-    
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -114,8 +108,20 @@ class NeumorphicView: UIView {
         set {
             switch(shape) {
             case .Flat, .Concave, .Convex:
-                shadowLayer0.shadowOffset = CGSize(width: newValue, height: newValue)
-                shadowLayer1.shadowOffset = CGSize(width: -newValue, height: -newValue)
+                switch(direction) {
+                case .TopLeft:
+                    shadowLayer0.shadowOffset = CGSize(width: newValue, height: newValue)
+                    shadowLayer1.shadowOffset = CGSize(width: -newValue, height: -newValue)
+                case .TopRight:
+                    shadowLayer0.shadowOffset = CGSize(width: -newValue, height: newValue)
+                    shadowLayer1.shadowOffset = CGSize(width: newValue, height: -newValue)
+                case .BottomLeft:
+                    shadowLayer0.shadowOffset = CGSize(width: newValue, height: -newValue)
+                    shadowLayer1.shadowOffset = CGSize(width: -newValue, height: newValue)
+                case .BottomRight:
+                    shadowLayer0.shadowOffset = CGSize(width: -newValue, height: -newValue)
+                    shadowLayer1.shadowOffset = CGSize(width: newValue, height: newValue)
+                }
             case .Pressed:
                 break
             }
@@ -181,11 +187,6 @@ class NeumorphicView: UIView {
         self.layer.addSublayer(topLayer)
         
         self.layer.addSublayer(gradientLayer)
-        
-        
-        
-
-        
         
         switch(shape) {
         case .Flat:
