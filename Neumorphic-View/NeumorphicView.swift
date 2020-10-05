@@ -194,23 +194,49 @@ class NeumorphicView: UIView {
         case .Concave:
             gradientLayer.cornerRadius = self.cornerRadius
             gradientLayer.frame = self.bounds
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 1, y: 1)
             gradientLayer.colors = [
                 gradientColor0?.cgColor as Any, gradientColor1?.cgColor as Any
             ]
             gradientLayer.locations = [0, 1]
             self.layer.addSublayer(gradientLayer)
+            
+            switch(direction) {
+            case .TopLeft:
+                gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+                gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+            case .TopRight:
+                gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+                gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+            case .BottomLeft:
+                gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+                gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+            case .BottomRight:
+                gradientLayer.startPoint = CGPoint(x: 1, y: 1)
+                gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+            }
         case .Convex:
             gradientLayer.cornerRadius = self.cornerRadius
             gradientLayer.frame = self.bounds
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = CGPoint(x: 1, y: 1)
             gradientLayer.colors = [
                 gradientColor1?.cgColor as Any, gradientColor0?.cgColor as Any
             ]
             gradientLayer.locations = [0, 1]
             self.layer.addSublayer(gradientLayer)
+            
+            switch(direction) {
+            case .TopLeft:
+                gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+                gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+            case .TopRight:
+                gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+                gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+            case .BottomLeft:
+                gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+                gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+            case .BottomRight:
+                gradientLayer.startPoint = CGPoint(x: 1, y: 1)
+                gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+            }
         case .Pressed:
             switch(direction) {
             case .TopLeft:
