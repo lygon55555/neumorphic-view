@@ -91,7 +91,7 @@ class NeumorphicView: UIView {
         }
     }
     
-    @IBInspectable var radius: CGFloat {
+    @IBInspectable var shadowRadius: CGFloat {
         get {
             return shadowLayer0.shadowRadius*2
         }
@@ -240,17 +240,17 @@ class NeumorphicView: UIView {
         case .Pressed:
             switch(direction) {
             case .TopLeft:
-                self.addInnerShadow(onSide: .topAndLeft, shadowColor: shadowColor0!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
-                self.addInnerShadow(onSide: .bottomAndRight, shadowColor: shadowColor1!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .topAndLeft, shadowColor: shadowColor0!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .bottomAndRight, shadowColor: shadowColor1!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
             case .TopRight:
-                self.addInnerShadow(onSide: .topAndRight, shadowColor: shadowColor0!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
-                self.addInnerShadow(onSide: .bottomAndLeft, shadowColor: shadowColor1!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .topAndRight, shadowColor: shadowColor0!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .bottomAndLeft, shadowColor: shadowColor1!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
             case .BottomLeft:
-                self.addInnerShadow(onSide: .bottomAndLeft, shadowColor: shadowColor0!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
-                self.addInnerShadow(onSide: .topAndRight, shadowColor: shadowColor1!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .bottomAndLeft, shadowColor: shadowColor0!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .topAndRight, shadowColor: shadowColor1!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
             case .BottomRight:
-                self.addInnerShadow(onSide: .bottomAndRight, shadowColor: shadowColor0!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
-                self.addInnerShadow(onSide: .topAndLeft, shadowColor: shadowColor1!.cgColor, shadowSize: radius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .bottomAndRight, shadowColor: shadowColor0!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
+                self.addInnerShadow(onSide: .topAndLeft, shadowColor: shadowColor1!.cgColor, shadowSize: shadowRadius/2, cornerRadius: cornerRadius, shadowOpacity: opacity)
             }
         }
     }
@@ -360,16 +360,13 @@ extension UIColor {
 
 extension UIView
 {
-    // different inner shadow styles
     public enum innerShadowSide
     {
         case all, left, right, top, bottom, topAndLeft, topAndRight, bottomAndLeft, bottomAndRight, exceptLeft, exceptRight, exceptTop, exceptBottom
     }
     
-    // define function to add inner shadow
     public func addInnerShadow(onSide: innerShadowSide, shadowColor: CGColor, shadowSize: CGFloat, cornerRadius: CGFloat = 0.0, shadowOpacity: Float)
     {
-        // define and set a shaow layer
         let shadowLayer = CAShapeLayer()
         shadowLayer.frame = bounds
         shadowLayer.shadowColor = shadowColor
@@ -378,13 +375,8 @@ extension UIView
         shadowLayer.shadowRadius = shadowSize
         shadowLayer.fillRule = CAShapeLayerFillRule.evenOdd
         
-        // define shadow path
         let shadowPath = CGMutablePath()
-        
-        // define outer rectangle to restrict drawing area
         let insetRect = bounds.insetBy(dx: -shadowSize * 2.0, dy: -shadowSize * 2.0)
-        
-        // define inner rectangle for mask
         let innerFrame: CGRect = { () -> CGRect in
             switch onSide
             {
@@ -417,17 +409,10 @@ extension UIView
             }
         }()
         
-        // add outer and inner rectangle to shadow path
         shadowPath.addRect(insetRect)
         shadowPath.addRect(innerFrame)
-        
-        // set shadow path as show layer's
         shadowLayer.path = shadowPath
-        
-        // add shadow layer as a sublayer
         layer.addSublayer(shadowLayer)
-        
-        // hide outside drawing area
         clipsToBounds = true
     }
 }
