@@ -1,4 +1,7 @@
 # Neumorphic-View
+You can easily add neumorphic-views on storyboards by 
+
+# How to use
 1. Add `NeumorphicView.swift` to your project folder or copy the code  
 2. Go to your storyboard, and add an UIView  
 3. Open the Identity Inspector and type `NeumorphicView` the Class field  
