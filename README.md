@@ -1,5 +1,6 @@
 # Neumorphic-View
-You can easily add neumorphic-views on storyboards by 
+With IBDesignable NeumorphicView Class, you can easily add neumorphic-views on storyboards.
+Inspired by Alexplyuto's Neumorphism design.
 
 # How to use
 1. Add `NeumorphicView.swift` to your project folder or copy the code  
@@ -26,3 +27,10 @@ You also hvae to choose the type of direction by number.
 |![스크린샷 2020-10-07 오후 2 54 33](https://user-images.githubusercontent.com/39911797/95298468-16d49500-08b7-11eb-8b26-4c3fb4cd7acc.png)|![스크린샷 2020-10-07 오후 2 54 39](https://user-images.githubusercontent.com/39911797/95298481-1c31df80-08b7-11eb-97fa-7682ba7174ce.png)|![스크린샷 2020-10-07 오후 2 54 45](https://user-images.githubusercontent.com/39911797/95298489-1f2cd000-08b7-11eb-9cfd-a1bf68339baa.png)|![스크린샷 2020-10-07 오후 2 54 52](https://user-images.githubusercontent.com/39911797/95298495-20f69380-08b7-11eb-998a-f2cd5b17294c.png)|
 |:---:|:---:|:---:|:---:|
 |Top-Left|Top-Right|Bottom-Left|Bottom-Right|
+
+<br>
+
+## References
+* https://neumorphism.io/
+* https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6
+* https://medium.muz.li/skeuomorphism-neumorphism-ui-trend-e7b78792bd21
