@@ -30,7 +30,7 @@ You also hvae to choose the type of direction by number.
 
 <br>
 
-## References
+# References
 * https://neumorphism.io/
 * https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6
 * https://medium.muz.li/skeuomorphism-neumorphism-ui-trend-e7b78792bd21
