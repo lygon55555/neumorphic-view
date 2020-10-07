@@ -159,14 +159,14 @@ class NeumorphicView: UIView {
             shadowLayer1.shadowColor = shadowColor1?.cgColor
             
             gradientColor0 = UIColor.init(
-                red: redValue!-(15/255),
-                green: greenValue!-(15/255),
-                blue: blueValue!-(15/255), alpha: 1)
+                red: redValue!-(25/255),
+                green: greenValue!-(25/255),
+                blue: blueValue!-(25/255), alpha: 1)
             
             gradientColor1 = UIColor.init(
-                red: redValue!+(15/255),
-                green: greenValue!+(15/255),
-                blue: blueValue!+(15/255), alpha: 1)
+                red: redValue!+(25/255),
+                green: greenValue!+(25/255),
+                blue: blueValue!+(25/255), alpha: 1)
         }
     }
     
