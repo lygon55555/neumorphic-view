@@ -13,8 +13,7 @@ Since Xcode doesn't support custom drop-down menu, you have to choose the type o
 |![스크린샷 2020-10-07 오후 2 51 03](https://user-images.githubusercontent.com/39911797/95298108-8302c900-08b6-11eb-9071-f31a4d0c6c4d.png)|![스크린샷 2020-10-07 오후 2 51 11](https://user-images.githubusercontent.com/39911797/95298116-85fdb980-08b6-11eb-914a-65962d42fab6.png)|![스크린샷 2020-10-07 오후 2 51 18](https://user-images.githubusercontent.com/39911797/95298123-87c77d00-08b6-11eb-8e0c-cbd454157ce7.png)|![스크린샷 2020-10-07 오후 2 51 25](https://user-images.githubusercontent.com/39911797/95298126-89914080-08b6-11eb-8f35-0ca055f38719.png)|
 |:---:|:---:|:---:|:---:|
 |Flat|Concave|Convex|Pressed|
-
-
+<br>
 ## Direction of Shadow
 There are 4 types of direction.  
 `Top-Left(0), Top-Right(1), Bottom-Left(2), Bottom-Right(3)`  
