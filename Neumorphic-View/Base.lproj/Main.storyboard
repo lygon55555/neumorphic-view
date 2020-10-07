@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -14,57 +14,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Neumorphic_View" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeQ-te-fbs">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZb-Pn-AMm" customClass="NeumorphicView" customModule="Neumorphic_View" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.50980392159999999" green="0.63529411759999999" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5Yc-yD-ojP"/>
-                                    <constraint firstAttribute="height" constant="200" id="dvr-eq-SGW"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jx-7K-YTI" customClass="NeumorphicView" customModule="Neumorphic_View" customModuleProvider="target">
-                                <rect key="frame" x="110" y="434" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.43921568630000002" green="0.56078431370000004" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="C6F-ce-tTT"/>
-                                    <constraint firstAttribute="height" constant="100" id="Mvm-3i-pNB"/>
+                                    <constraint firstAttribute="width" constant="200" id="6oa-gY-kgo"/>
+                                    <constraint firstAttribute="height" constant="200" id="kEf-Zp-TBv"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="36"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shapeType">
                                         <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leftRight01">
-                                        <integer key="value" value="-3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="directionType">
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="opacity">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="36"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="opacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="intensity">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -72,19 +52,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QeQ-te-fbs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C3I-C1-35n"/>
-                            <constraint firstItem="QeQ-te-fbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QWj-4f-cgz"/>
-                            <constraint firstItem="1Jx-7K-YTI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFU-p7-7sV"/>
-                            <constraint firstItem="1Jx-7K-YTI" firstAttribute="top" secondItem="QeQ-te-fbs" secondAttribute="bottom" constant="50" id="x12-Mw-mIE"/>
+                            <constraint firstItem="pZb-Pn-AMm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Ql-8q-qgi"/>
+                            <constraint firstItem="pZb-Pn-AMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iRC-NM-JfD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="squareView" destination="QeQ-te-fbs" id="hCa-3s-CHH"/>
+                        <outlet property="neumorphicView" destination="pZb-Pn-AMm" id="F59-9a-slS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="138.38028169014083"/>
+            <point key="canvasLocation" x="138.40000000000001" y="138.0809595202399"/>
         </scene>
     </scenes>
     <resources>
