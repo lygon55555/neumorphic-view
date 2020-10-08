@@ -1,4 +1,4 @@
-![스크린샷 2020-10-08 오전 9 04 58](https://user-images.githubusercontent.com/39911797/95400795-86459580-0946-11eb-8552-7b87973dc123.png)
+![스크린샷 2020-10-08 오전 9 14 41](https://user-images.githubusercontent.com/39911797/95400871-bc831500-0946-11eb-8c86-987c8f73f81a.png)
 # Neumorphic-View
 With IBDesignable NeumorphicView Class, you can easily add neumorphic-views on storyboards.  
 Inspired by Alexplyuto's Neumorphism design.
