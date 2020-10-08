@@ -175,18 +175,18 @@ class NeumorphicView: UIView {
         shadowLayer0.frame = self.bounds
         shadowLayer0.shadowPath = shadowPath0?.cgPath
         shadowLayer0.shadowColor = shadowColor0?.cgColor
-        self.layer.addSublayer(shadowLayer0)
+        self.layer.insertSublayer(shadowLayer0, at: 0)
         
         shadowPath1 = UIBezierPath(roundedRect: self.bounds, cornerRadius: cornerRadius)
         shadowLayer1.frame = self.bounds
         shadowLayer1.shadowPath = shadowPath1?.cgPath
         shadowLayer1.shadowColor = shadowColor1?.cgColor
-        self.layer.addSublayer(shadowLayer1)
+        self.layer.insertSublayer(shadowLayer1, at: 1)
         
         topLayer.frame = self.bounds
-        self.layer.addSublayer(topLayer)
+        self.layer.insertSublayer(topLayer, at: 2)
         
-        self.layer.addSublayer(gradientLayer)
+        self.layer.insertSublayer(gradientLayer, at: 3)
         
         switch(shape) {
         case .Flat:
@@ -198,7 +198,7 @@ class NeumorphicView: UIView {
                 gradientColor0?.cgColor as Any, gradientColor1?.cgColor as Any
             ]
             gradientLayer.locations = [0, 1]
-            self.layer.addSublayer(gradientLayer)
+            self.layer.insertSublayer(gradientLayer, at: 3)
             
             switch(direction) {
             case .TopLeft:
@@ -221,7 +221,7 @@ class NeumorphicView: UIView {
                 gradientColor1?.cgColor as Any, gradientColor0?.cgColor as Any
             ]
             gradientLayer.locations = [0, 1]
-            self.layer.addSublayer(gradientLayer)
+            self.layer.insertSublayer(gradientLayer, at: 3)
             
             switch(direction) {
             case .TopLeft:
@@ -256,6 +256,7 @@ class NeumorphicView: UIView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         setup()
     }
     
