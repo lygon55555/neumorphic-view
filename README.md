@@ -31,6 +31,15 @@ You also hvae to choose the type of direction by number.
 
 <br>
 
+# Intensity of Shadow
+Opacity = 1, Shadow Radius = 25, Offset = 20  
+Check the differences when only changing the value of intensity.  
+|![스크린샷 2020-10-19 오전 10 57 29](https://user-images.githubusercontent.com/39911797/96393551-6c376d00-11fa-11eb-9912-f19b69b3bcea.png)|![스크린샷 2020-10-19 오전 10 57 35](https://user-images.githubusercontent.com/39911797/96393583-840ef100-11fa-11eb-8e9d-7102104d2ca3.png)|![스크린샷 2020-10-19 오전 10 57 42](https://user-images.githubusercontent.com/39911797/96393595-8e30ef80-11fa-11eb-8036-fc117512cb67.png)|![스크린샷 2020-10-19 오전 10 57 49](https://user-images.githubusercontent.com/39911797/96393604-9721c100-11fa-11eb-8a5f-5c9aad705e84.png)|
+|:---:|:---:|:---:|:---:|
+|Intensity = 10|Intensity = 20|Intensity = 30|Intensity = 40|
+
+<br>
+
 # References
 * https://neumorphism.io/
 * https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6
